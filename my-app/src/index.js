@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import * as serviceWorker from './serviceWorker';
+import NameTag from "./NameTag";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var renderNameTag = name => <NameTag key={name} name={name} />;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class App extends Component {
+    state = { names: ["colin", "sylys", "hannah", "burke", "murphy", "rose"] };
+    render() {
+        var NameTagElements = this.state.names.map(renderNameTag);
+        return (
+            <div className="App">
+                <h1>Name Tag Generator</h1>
+                {NameTagElements}
+            </div>
+        );
+    }
+};
+
+var rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
