@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Name Tag Generator</h1>
+        <h1 className="App__title">React Name Tag Generator</h1>
         <UserInput addName={this.addName} />
         <NameTagList names={this.state.names} removeName={this.removeName} />
       </div>

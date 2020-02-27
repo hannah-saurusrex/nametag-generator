@@ -1,6 +1,10 @@
 .App {
-	font-family: sans-serif;
+	font-family: "Spartan", sans-serif;
 	text-align: center;
+}
+
+.App__title {
+	font-family: "Spartan", sans-serif;
 }
 
 /* Add Name Input */
@@ -26,10 +30,12 @@ input[type="text"] {
 	color: white;
 	margin: 0;
 	font-size: 40px;
+	font-family: "Spartan";
 }
 .subtitle {
 	color: white;
 	margin: 0;
+	font-family: "Spartan";
 }
 .name {
 	background-color: white;
